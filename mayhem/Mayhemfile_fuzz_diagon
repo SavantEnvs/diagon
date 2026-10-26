@@ -1,0 +1,9 @@
+project: savantenvs/diagon
+target: fuzz_diagon
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_diagon/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_diagon
+    libfuzzer: true
+    timeout: 10
